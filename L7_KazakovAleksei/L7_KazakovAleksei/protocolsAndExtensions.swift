@@ -15,9 +15,3 @@ protocol Carable { // общее описание машины через про
     var doors: Int { get set }
     var vin: String { get set } // vin-номер машины
 }
-
-protocol Details {
-    var wheelsAmount: Int { get  set }
-    var enginesAmount: Int { get  set }
-    var doorsAmount: Int { get  set }
-}

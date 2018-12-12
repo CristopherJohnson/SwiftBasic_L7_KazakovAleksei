@@ -8,53 +8,83 @@
 
 import Foundation
 
+print("=================== Машина №1 ===================")
+
 var testCar = Conveyor()
 
+print("=================== Присоединяем колеса ===================")
+
 testCar = connectWheels(car: testCar, wheels: 3)
-print(testCar.wheels)
+print(testCar)
 testCar = connectWheels(car: testCar, wheels: 4)
-print(testCar.wheels)
+print(testCar)
+
+print("=================== Присоединяем двери ====================")
 
 testCar = connectDoors(car: testCar, doors: 5)
-print(testCar.doors)
+print(testCar)
 
 testCar = connectDoors(car: testCar, doors: 4)
-print(testCar.doors)
+print(testCar)
 
 testCar = connectDoors(car: testCar, doors: 3)
 
+print("=================== Присоединяем двигатель ================")
+
 testCar = connectEngine(car: testCar, engine: -1)
-print(testCar.engine)
+print(testCar)
 
 testCar = connectEngine(car: testCar, engine: 1)
-print(testCar.engine)
+print(testCar)
 
 testCar = connectEngine(car: testCar, engine: 1)
-print(testCar.engine)
+print(testCar)
 
+print("=================== Присваиваем vin ================")
+
+testCar = createVin(car: testCar, vin: "11111222")
+print(testCar)
 testCar = createVin(car: testCar, vin: "1111111111")
+print(testCar)
+testCar = createVin(car: testCar, vin: "111")
+print(testCar)
+
+
+print("=================== Машина №2 ===================")
 
 var testCarTwo = Conveyor()
 
-testCarTwo = connectWheels(car: testCarTwo, wheels: 4)
-testCarTwo = connectDoors(car: testCarTwo, doors: 4)
-testCarTwo = connectEngine(car: testCarTwo, engine: 1)
+print("=================== Пытаемся создать вторую машину ================")
 
-print(Conveyor.wheelsAmount)
-print(Conveyor.doorsAmount)
-print(Conveyor.enginesAmount)
+testCarTwo = connectWheels(car: testCarTwo, wheels: 4)
+print(testCarTwo)
+testCarTwo = connectDoors(car: testCarTwo, doors: 4)
+print(testCarTwo)
+testCarTwo = connectEngine(car: testCarTwo, engine: 1)
+print(testCarTwo)
+print("Количество колес на складе: \(Conveyor.wheelsAmount)")
+print("Количество дверей на складе: \(Conveyor.doorsAmount)")
+print("Количество двигателей на складе: \(Conveyor.enginesAmount)")
+
+print("=================== Добавляем детали на склад ================")
+
 Conveyor.getSomeWheels(amount: 4)
 Conveyor.getSomeDoors(amount: 8)
 Conveyor.getSomeEngines(amount: 2)
-print(Conveyor.wheelsAmount)
-print(Conveyor.doorsAmount)
-print(Conveyor.enginesAmount)
-testCarTwo = connectWheels(car: testCarTwo, wheels: 4)
-testCarTwo = connectDoors(car: testCarTwo, doors: 4)
-testCarTwo = connectEngine(car: testCarTwo, engine: 1)
-print(Conveyor.wheelsAmount)
-print(Conveyor.doorsAmount)
-print(Conveyor.enginesAmount)
+print("Количество колес на складе: \(Conveyor.wheelsAmount)")
+print("Количество дверей на складе: \(Conveyor.doorsAmount)")
+print("Количество двигателей на складе: \(Conveyor.enginesAmount)")
 
+print("=================== Присоединяем колеса ===================")
+testCarTwo = connectWheels(car: testCarTwo, wheels: 4)
+print(testCarTwo)
+print("=================== Присоединяем двери ====================")
+testCarTwo = connectDoors(car: testCarTwo, doors: 4)
+print(testCarTwo)
+print("=================== Присоединяем двигатель ================")
+testCarTwo = connectEngine(car: testCarTwo, engine: 1)
+print(testCarTwo)
+print("=================== Присваиваем vin ================")
+testCarTwo = createVin(car: testCarTwo, vin: "1111111111")
 testCarTwo = createVin(car: testCarTwo, vin: "1112111111")
-print(testCarTwo.vin)
+print(testCarTwo)

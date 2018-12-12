@@ -15,3 +15,9 @@ protocol Carable { // общее описание машины через про
     var doors: Int { get set }
     var vin: String { get set } // vin-номер машины
 }
+
+extension Conveyor: CustomStringConvertible {
+    var description: String {
+        return "Машина имеет: колес - \(wheels), дверей - \(doors), двигатель - \(engine), vin \(vin)"
+    }
+}

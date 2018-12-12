@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+enum ConveyorError: Error {
+    case wrongWheelsAmount
+    case notEnoughWheels
+}
